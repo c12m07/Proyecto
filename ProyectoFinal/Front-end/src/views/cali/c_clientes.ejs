@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>CLIENTES - CALI</title>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/c_menu.css">
+        <link rel="stylesheet" href="/css/cali.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus icon'></i>
+                    <div class="logo_name">Cali</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="/cali/productos">
+                        <i class='bx bx-cart-alt' ></i>
+                        <span class="links_name">Productos</span>
+                    </a>
+                    <span class="tooltip">Productos</span>
+                </li>
+                <li>
+                    <a href="/cali/clientes">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Clientes</span>
+                    </a>
+                    <span class="tooltip">Clientes</span>
+                </li>
+                <li>
+                    <a href="/cali/proveedores">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Proveedores</span>
+                    </a>
+                    <span class="tooltip">Proveedores</span>
+                </li>
+                <li>
+                    <a href="/cali/ventas">
+                        <i class='bx bx-folder' ></i>
+                        <span class="links_name">Ventas</span>
+                    </a>
+                    <span class="tooltip">Ventas</span>
+                </li>
+                <li>
+                    <a href="/cali/reportes">
+                        <i class='bx bx-pie-chart-alt-2' ></i>
+                        <span class="links_name">Reportes</span>
+                    </a>
+                    <span class="tooltip">Reportes</span>
+                </li>
+                <li class="profile">
+                    <div class="profile-details">
+                        <div class="name_job">
+                            <div class="name">Administrador</div>
+                            <div class="job">Cerrar Sesión</div>
+                        </div>
+                    </div>
+                    <a href="/cali/login">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="text">CLIENTES</div>
+            <div class="clientes">
+                <form action="/cali/clientes/CRUD" method="post">
+                    <div class="primerocli">
+                        <label for="id">Cedula:</label>
+                        <input value="<%= clien[0].id%>" type="text" id="id" name="id">
+                    <br />
+                        <label for="nombre_cliente">Nombre Completo:</label> 
+                        <input value="<%= clien[0].nombre_cliente%>" type="text" id="nombre_cliente" name="nombre_cliente">
+                    <br />
+                        <label for="direccion_cliente">Direccion:</label> 
+                        <input value="<%= clien[0].direccion_cliente %>" type="text" id="direccion_cliente" name="direccion_cliente">
+                    <br />
+                    </div>
+                    <div class="segundocli">
+                            <label for="email_cliente">Correo Electronico:</label> 
+                            <input value="<%= clien[0].email_cliente %>" type="text" id="email_cliente" name="email_cliente">
+                        <br />
+                            <label for="telefono_cliente">Telefono:</label> 
+                            <input value="<%= clien[0].telefono_cliente %>" type="text" id="telefono_cliente" name="telefono_cliente">
+                    </div>
+                    <div class="botonescli">
+                        <input name="op" value="consultar" type="submit"/>
+                        <input name="op" value="crear" type="submit"/>
+                        <input name="op" value="actualizar" type="submit"/>
+                        <input name="op" value="borrar" type="submit"/>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <script src="/js/Funcionalidades.js"></script>
+    </body>
+</html>

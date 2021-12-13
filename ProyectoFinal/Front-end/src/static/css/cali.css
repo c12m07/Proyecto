@@ -1,0 +1,173 @@
+/* FORMULARIO CLIENTES */
+.clientes{
+	margin-top: 80px;
+	margin-left: 150px;
+	height: 50%;
+	width: 80%;
+}
+.clientes label{
+	display: inline-block;
+	font-size: 17px;
+	font-weight: 600;
+    width: 210px;
+    margin: 0;
+    padding: 20px;
+}
+.primerocli{
+    width: 420px;
+    float: left;
+}
+.segundocli{
+    width: 450px;
+    float: left;
+}
+.botonescli{
+    margin-top: 50px;
+	margin-left: 170px;
+	height: 50px;
+	width: 800px;
+	display: inline-block;
+	clear: both;
+}
+.botonescli input, .botonescli a{
+  width: 130px;
+  display: block;
+  float: left;
+  height: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #E38F4F;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  color: #161616;
+  margin-right: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+input[type=text]{
+  width: 200px;
+  display: inline-block;
+  height: 35px;
+  padding: 2px;
+  border-radius: 4px 4px 4px 4px;
+  border: none;
+  background-color: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  transition: .3s ease all;
+  text-align: center;
+  color: #161616;
+}
+input:focus {
+  border: 2px solid #CC7351;
+  outline: none;
+}
+.botonescli input:hover, .botonescli a:hover{
+	color: white;
+  background-color: #4D2C1F;
+}
+
+/* TABLAS */
+div#table_p{
+  width: 80%;
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-bottom: 50px;
+}
+table{
+  border-collapse: collapse;
+}
+th{
+  padding: 7px;
+  width: 10%;
+  height: 40px;
+  background-color: #CC7351;
+  font-size: 15px;
+  letter-spacing:2px;
+  color: #fff;
+  border: 1px solid #CC7351;
+}
+td{
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #CC7351;
+}
+
+/* PRODUCTOS */
+.Acciones input[type=file]#mi-archivo{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.Acciones label[for="mi-archivo"], .Acciones a, .Acciones input[type=submit]{
+  margin-left: 8%;
+  margin-top: 15px;
+  height: 50px;
+  line-height: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #E38F4F;
+  transition: all .5s;
+  cursor: pointer;
+  padding: 15px 40px !important;
+  width: fit-content;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  border: 0;
+}
+.Acciones label:hover, .Acciones input[type=submit]:hover{
+  background-color: #4D2C1F;
+}
+
+.box{
+    width: 350px;
+    height: 350px;
+    background-color: #E38F4F;
+    text-align: center;
+    line-height: 335px;
+    border-radius: 220px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 5%;
+    margin-left: 16%;
+    float: left;
+    display: block;
+    z-index: 3;
+    box-shadow: 0px 0px 50px #E38F4F;
+}
+
+.box a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.box:hover{
+    text-shadow: 0px 0px 6px #161616;
+    box-shadow: 0px 0px 15px #161616;
+}
+
+/* TOTAL VENTAS */
+#total{
+  width:auto;
+  display: block;
+  float: right;
+  margin-right: 17%;
+}
+#total label{
+  font-size: 20px;
+  margin-right: 20px;
+}
+#total input{
+  font-size: 18px;
+}

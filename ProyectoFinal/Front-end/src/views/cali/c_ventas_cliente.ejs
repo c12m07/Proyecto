@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VENTAS POR CLIENTE</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/c_menu.css">
+    <link rel="stylesheet" href="/css/cali.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+                <div class="logo_name">Cali</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/cali/productos">
+                    <i class='bx bx-cart-alt' ></i>
+                    <span class="links_name">Productos</span>
+                </a>
+                <span class="tooltip">Productos</span>
+            </li>
+            <li>
+                <a href="/cali/clientes">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Clientes</span>
+                </a>
+                <span class="tooltip">Clientes</span>
+            </li>
+            <li>
+                <a href="/cali/proveedores">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Proveedores</span>
+                </a>
+                <span class="tooltip">Proveedores</span>
+            </li>
+            <li>
+                <a href="/cali/ventas">
+                    <i class='bx bx-folder' ></i>
+                    <span class="links_name">Ventas</span>
+                </a>
+                <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+                <a href="/cali/reportes">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="links_name">Reportes</span>
+                </a>
+                <span class="tooltip">Reportes</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <div class="name_job">
+                        <div class="name">Administrador</div>
+                        <div class="job">Cerrar Sesión</div>
+                    </div>
+                </div>
+                <a href="/cali/login">
+                <i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="text">VENTAS POR CLIENTE</div>
+        <div id="table_p">
+            <table>
+                <tr>
+                    <th>CÉDULA</th>
+                    <th>NOMBRE</th>
+                    <th>VALOR TOTAL VENTAS</th>
+                </tr>
+                <% total = 0 %>
+                <% valor = 0 %>
+                <% nombre = "" %>
+                <% for(var a = 1; a < ventas.length; a++){                              %>
+                <%      for(var e = 0; e < ventas.length; e++){                         %>
+                <%          if(ventas[a].cedula_cliente == calculo[e].cedula_cliente){  %>
+                <%              total = total + calculo[e].valor_venta                  %>
+                <%          }                                                           %>
+                <%      }                                                               %>
+                        <tr>
+                            <td><%= ventas[a].cedula_cliente %></td> 
+                            <td><%= clien[a].nombre_cliente %></td>
+                            <td><%= total %></td>
+                        </tr>
+                <%      valor = valor + total                                           %>
+                <%      total = 0                                                       %>
+                <%      for(var e = a+1; e < ventas.length; e++){                       %>
+                <%          if(ventas[a].cedula_cliente == calculo[e].cedula_cliente){  %>
+                <%              ventas.splice(e, 1);                                    %>
+                <%          }                                                           %>
+                <%          if(ventas[a].cedula_cliente == calculo[e].cedula_cliente){  %>
+                <%              ventas.splice(e, 1);                                    %>
+                <%          }                                                           %>
+                <%      }                                                               %>    
+                <% }%>
+            </table>
+        </div>
+        <div id="total">
+            <label for="total_v">TOTAL VENTAS</label>
+            <input type="text" name="total_v" id="total_v" value="<%= valor%>" disabled>
+        </div>
+    </section>
+    <script src="/js/Funcionalidades.js"></script>
+</body>
+</html>

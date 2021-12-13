@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>LISTA DE CLIENTES</title>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/b_menu.css">
+        <link rel="stylesheet" href="/css/bogota.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus icon'></i>
+                    <div class="logo_name">Bogotá</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="/bogota/productos">
+                        <i class='bx bx-cart-alt' ></i>
+                        <span class="links_name">Productos</span>
+                    </a>
+                    <span class="tooltip">Productos</span>
+                </li>
+                <li>
+                    <a href="/bogota/clientes">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Clientes</span>
+                    </a>
+                    <span class="tooltip">Clientes</span>
+                </li>
+                <li>
+                    <a href="/bogota/proveedores">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Proveedores</span>
+                    </a>
+                    <span class="tooltip">Proveedores</span>
+                </li>
+                <li>
+                    <a href="/bogota/ventas">
+                        <i class='bx bx-folder' ></i>
+                        <span class="links_name">Ventas</span>
+                    </a>
+                    <span class="tooltip">Ventas</span>
+                </li>
+                <li>
+                    <a href="/bogota/reportes">
+                        <i class='bx bx-pie-chart-alt-2' ></i>
+                        <span class="links_name">Reportes</span>
+                    </a>
+                    <span class="tooltip">Reportes</span>
+                </li>
+                <li>
+                    <a href="/bogota/consolidado">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Consolidación</span>
+                    </a>
+                    <span class="tooltip">Consolidación</span>
+                </li>
+                <li class="profile">
+                    <div class="profile-details">
+                        <div class="name_job">
+                            <div class="name">Administrador</div>
+                            <div class="job">Cerrar Sesión</div>
+                        </div>
+                    </div>
+                    <a href="/bogota/login">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="text">LISTADO DE CLIENTES</div>
+            <div id="table_p">
+                <table>
+                        <tr>
+                            <th>CÉDULA</th>
+                            <th>DIRECCION</th>
+                            <th>EMAIL</th>
+                            <th>NOMBRE</th>
+                            <th>TELEFONO</th>
+                        </tr>
+                        <% for(var i = 1; i < client.length; i++){ %>
+                            <tr>
+                                <td><%= client[i].id %></td>
+                                <td><%= client[i].direccion_cliente %></td>
+                                <td><%= client[i].email_cliente %></td>
+                                <td><%= client[i].nombre_cliente %></td>
+                                <td><%= client[i].telefono_cliente %></td>
+                            </tr>
+                        <% }%>
+                </table>
+            </div>
+        </section>
+        <script src="/js/Funcionalidades.js"></script>
+    </body>
+</html>
